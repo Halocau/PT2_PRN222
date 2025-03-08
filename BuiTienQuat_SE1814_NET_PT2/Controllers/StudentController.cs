@@ -135,5 +135,23 @@ namespace BuiTienQuat_SE1814_NET_PT2.Controllers
             var students = _studentRepository.Search(keyword);
             return PartialView("_StudentTablePartial", students);
         }
+
+        // GET: Student/Detail/5
+        public ActionResult Detail(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var studentDetail = _studentRepository.GetById(id);
+            if (studentDetail == null)
+            {
+                return NotFound();
+            }
+
+            return View(studentDetail);
+        }
+
     }
 }
