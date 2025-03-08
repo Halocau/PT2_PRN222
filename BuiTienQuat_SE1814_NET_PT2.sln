@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuiTienQuat_SE1814_NET_PT2", "BuiTienQuat_SE1814_NET_PT2\BuiTienQuat_SE1814_NET_PT2.csproj", "{8230656E-A866-4172-88F1-F6E6CAD1E45E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8230656E-A866-4172-88F1-F6E6CAD1E45E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8230656E-A866-4172-88F1-F6E6CAD1E45E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8230656E-A866-4172-88F1-F6E6CAD1E45E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8230656E-A866-4172-88F1-F6E6CAD1E45E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E99F6EF5-EDC3-44D4-B972-440116E4D60C}
+	EndGlobalSection
+EndGlobal

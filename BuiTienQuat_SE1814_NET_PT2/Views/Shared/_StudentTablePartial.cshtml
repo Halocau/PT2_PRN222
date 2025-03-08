@@ -1,0 +1,21 @@
+﻿@model List<BuiTienQuat_SE1814_NET_PT2.Models.Student>
+
+@foreach (var student in Model)
+{
+    <tr>
+        <td>@student.Id</td>
+        <td>@student.Name</td>
+        <td>@student.Dob?.ToString("yyyy-MM-dd")</td>
+        <td>@student.Major</td>
+        <td>
+            <button class="btn btn-warning btn-sm edit-btn">
+                <a asp-action="Edit" asp-route-id="@student.Id">Edit</a>
+            </button>
+            <form asp-action="Delete" method="post" style="display:inline;"
+                  onsubmit="return confirm('Are you sure you want to delete this student?');">
+                <input type="hidden" name="id" value="@student.Id" />
+                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+        </td>
+    </tr>
+}
