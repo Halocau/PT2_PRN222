@@ -4,9 +4,9 @@ namespace BuiTienQuat_SE1814_NET_PT2.Repository
 {
     public class StudentRepository : IStudentRepository
     {
-        private readonly Pt2prn222Context _context;
+        private readonly ApplicationDbContext _context;
 
-        public StudentRepository(Pt2prn222Context context)
+        public StudentRepository(ApplicationDbContext context)
         {
             _context = context;
         }
