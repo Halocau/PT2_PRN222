@@ -42,6 +42,15 @@ namespace BuiTienQuat_SE1814_NET_PT2.Controllers
                 ModelState.AddModelError("Dob", "Date of Birth cannot be in the future.");
                 return View(student);
             }
+
+            if (!student.Dob.HasValue || (DateTime.Today.AddYears(-18) < student.Dob.Value))
+            {
+                ModelState.AddModelError("Dob", "Student must be at least 18 years old.");
+                return View(student);
+            }
+
+
+
             try
             {
                 _studentRepository.Add(student);
@@ -77,7 +86,7 @@ namespace BuiTienQuat_SE1814_NET_PT2.Controllers
         {
             if (id != student.Id)
             {
-                return BadRequest();
+                return NotFound();
             }
             if (!ModelState.IsValid)
             {
@@ -94,7 +103,9 @@ namespace BuiTienQuat_SE1814_NET_PT2.Controllers
                 Student oldStudent = _studentRepository.GetById(id);
                 if (oldStudent == null)
                 {
-                    return NotFound();
+                    //return NotFound();
+                    ModelState.AddModelError("", "Student ID does not exist.");
+                    return View(student);
                 }
 
                 // Cập nhật các thuộc tính

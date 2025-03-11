@@ -33,7 +33,7 @@ namespace BuiTienQuat_SE1814_NET_PT2.Repository
 
         public Student GetById(string id)
         {
-            return _context.Students.FirstOrDefault(s => s.Id == id);
+            return _context.Students.FirstOrDefault(s => s.Id.Equals(id));
         }
 
         public async Task SaveChangesAsync()
@@ -57,5 +57,12 @@ namespace BuiTienQuat_SE1814_NET_PT2.Repository
         {
             _context.Students.Update(student);
         }
+
+        public void DateYear(Student student)
+        {
+            _context.Students.Select(s => s.Dob.GetValueOrDefault().Year);
+        }
+
+
     }
 }
